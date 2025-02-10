@@ -61,3 +61,210 @@ status codes.
 3XX -> Redirection
 4XX -> Client Error
 5XX -> Server Error
+
+Maven:
+======
+Maven is an build tool.
+
+Build -> to convert /package the project into jar/war/ear
+
+Repositories --> Local(.m2)/Central(maven)/remote(Company)
+
+Scopes :--  runtime/compile/provided
+
+LifeCycle or goals --> compile/package/clean/install/deploy/test
+
+
+
+
+Difference Between CrudRepository and PaginationAndSortingRepository
+
+Difference Between CrudRepository and JpaRepository
+
+
+
+
+
+1)Spring Core(Dependency injection->Setter/Constructor/Collection injection)
+2)IOC(inversion of control) --> we will not create the object for the bean class, Container will create
+the objects and we will use those object while injecting into class reference variable(Loosely Coupled).
+
+//search for the life cycle method of IOC containers
+Container:
+----------
+Bean Container
+ApplicationContainer -->ApplicationContext
+@PostConstruct
+@PreDestroy
+
+b) Autowire -->injecting the dependency object.(with out ref tag)
+byType    --> @Autowired   --> on property/field
+byName    --> @Autowired    --> On setter Method
+constructor -->@Autowired   ---> On constructor
+
+c)Bean Scopes:-- by default containers will create the bean class object and store in which default scope
+  "singleton"
+ singleton:- object created only once and try to inject into multiple class reference variable will get the 
+same reference.
+
+ ii)prototype :- for each class reference variable instance ,it will create a new object.
+
+
+In How Many we can create SpringBoot Project:
+==============================================
+start.io.spring --->spring Initializer
+Download ->STS  --> File->New->SpringStarterProject
+
+
+
+4)IN SpringBoot we eliminated or removes the configuration file(.xml) and replace with annotations
+  
+//setter and constructors Dependency injections --> @Value followed CommandLineRunner
+
+
+5)SpringData Jpa --> 
+======================
+spring-boot-starter-data-jpa
+
+
+
+interfaces (JpaRepository,PageingAndSortingRepository and CrudRepository)
+Difference between all the repositories.
+Note:
+-----
+by default above repositories will perform basic crud operation using primary key (ID).
+
+Custom Spring Data Query:
+==========================
+Other than the primary key(Id) field, you need to fetch the data based on other fields/properties/attributes.
+
+
+1)Query Method Approach ---> findBy or getBy 
+
+Qns: Book(bookId,bookName,authorName,price)
+----
+write a custom JPQL  to get the data based on authorName?
+
+soL:- Book findByAuthorName(String authName);
+
+2)@Query Annotation(positional parameter(?) and NamedParameter(:)-->@Param) /Dyamic Query execution
+3)@NamedQuery(name="",query="") //static Query
+
+
+
+
+SpringBootRestApi:
+------------------
+spring-boot-starter-web   //pom.xml//starter
+
+
+RestFul-Representational State transfer.It is Architecural style.
+
+how to share the data using RestApi --> json
+
+1)@Repository
+2)@Service
+3)@RestController
+4)@ResponseBody
+5)@PathVaribale/@RequestParam
+6)@RequestMapping
+7)ResponseEntity   --> Refer to Topic(RestFul Api Intro...)
+
+
+GlobalException:
+================
+@RestContollerAdvice/@Controller
+@ExceptionHandler
+
+Validation:
+===========
+spring-boot-starter-validations -->Starter
+
+==> @Valid @RequestBody
+
+@NotNull
+@NotEmpty
+@NotBlank
+@Email
+@Pattern
+@PastOrPresent
+@Future
+@FutureOrPresent
+
+==>MethodArugmentNotValidException --> handled by @ExceptionHandler in GlobalException class
+
+
+PathVariableValidation:->  on top of class we need to annotated @Validated - throws the exception
+                             ConstraintViolationException.
+
+///
+Converting Dto to Entity and Entity to DTO
+
+
+
+SpringSecurity/SpringBootSecurity:
+==================================
+Authentication
+Authorization
+
+1)SpringBootBasicAuthentication
+2)JWT Token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
