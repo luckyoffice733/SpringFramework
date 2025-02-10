@@ -1,0 +1,63 @@
+API -> Application Programming Interface:
+-----------------------------------------
+The main objective of API is two applications can communicate with each other. 
+API allows external agent to communicate (integrate and exchange information) with our application.
+In Simple way: 'Methods of communication between software components'
+
+Eg1: By using API a java application can communicate with python application.
+Book my show application can communicate with Payment gateway application to complete our booking.
+
+
+Web API/Web Service:
+----------------------
+The interface of communication between the user and application over the web by using 
+HTTP is nothing but Web API.
+
+
+REST: Representational State Transfer:
+--------------------------------------
+Representational State Transfer(REST) is an architectural style.
+
+It defines several Rules/Guide Lines to develop Web APIs/Web Services By using REST, we can develop web APIs very easily in concise way.
+
+Hence REST is the most popular Architecture to develop Web Services.
+
+
+Restful API:
+------------
+The API which is developed by using REST Architecture is nothing but Restful API. 
+i.e. interface between the user and application where API implements REST Architecture.
+
+
+HTTP METHODS:
+-----------
+HTTP Methods represent the type of operation what we required.
+
+Based on requirement we have to use the corresponding HTTP verb.
+
+The following are various HTTP Verbs
+1) GET -> To get one/more existing resources
+2) POST -> To create a new resource
+3) PUT -> To update an existing resource like update all fields of employee
+4) PATCH -> To perform partial updating of an existing resource like updating only salary 
+of employee
+5) DELETE -> To delete an existing resource.
+
+HTTP Verbs vs Database CRUD Operations:
+-----------------------------------------
+C (CREATE) -> POST
+R (RETRIEVE/READ) -> GET
+U (UPDATE) -> PUT/PATCH
+D (DELETE) -> DELETE
+
+
+Status Codes:
+-------------
+Status code represents the status of HTTP Response. The following are various possible 
+status codes.
+
+1XX -> Informational
+2XX -> Successful
+3XX -> Redirection
+4XX -> Client Error
+5XX -> Server Error
