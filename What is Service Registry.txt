@@ -1,0 +1,29 @@
+What is Service Registry?
+
+Service registry acts as a central directory for all the deployed services and keeps track of all the available service instances.
+
+These Services instances are individual deployments of each microservice,
+potentially running on different machines or containers.
+
+It plays a crucial role in enabling service discovery, which is the process of locating and accessing other services within the microservices architecture.
+
+Purpose of service registry
+===========================
+The service registry maintain an update list of all service instances, including their network locations (IP address and port) and health status.
+
+Benefits of using service registry:
+===================================
+Dynamic Service Discovery : Enables components to find and interact with available services, even of their locations change frequently.
+
+Loose coupling: Services don't need to know the specific location of other services directly, improving maintainability and scalability.
+
+Load balancing : The information in the registry can be used by load balancers to distribute the incoming requests across healthy service instances.
+
+How Service Registry Works:
+===========================
+Registration : Each microservice instance registers itself with service registry, providing information like its name, location (host, port) and potentially other service-specific details.
+
+Discovery: When a microservice needs to communicate with another service, it queries the registry to find the location of the desired service. The registry then provides the necessary information, such as the service's address, allowing the calling service to establish a connection.
+
+
+
